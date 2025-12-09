@@ -362,8 +362,10 @@ def setup_vehicle():
     #net.propellers.append(propeller)
     prop_right = deepcopy(propeller)
     prop_left  = deepcopy(propeller)
-    prop_right.origin = [[0,  2.0, -0.325]]
-    prop_left.origin  = [[0, -2.0, -0.325]]
+    #prop_right.origin = [[0,  2.0, -0.325]]
+    #prop_left.origin  = [[0, -2.0, -0.325]]
+    prop_right.origin = [[1.8,  2.5, -0.5]]
+    prop_left.origin  = [[1.8, -2.5, -0.5]]
 
     net.propellers.append(prop_right)
     net.propellers.append(prop_left)
@@ -633,4 +635,3 @@ def make_plots(results):
 if __name__ == '__main__':
     main()
     plt.show()
-
