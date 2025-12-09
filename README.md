@@ -1,4 +1,3 @@
-````markdown
 # ✅ README – Reprodutibilidade do Ambiente SUAVE 2.5.2 + Modificações
 
 Este documento descreve como **exportar**, **fazer backup**, **transportar** e **restaurar** completamente o ambiente SUAVE usado neste projeto, incluindo as **modificações manuais feitas dentro do SUAVE no ambiente virtual** e também a pasta `~/Downloads/SUAVE`.
@@ -14,7 +13,7 @@ Dentro do ambiente:
 ```bash
 conda activate suave_env
 conda env export > suave_env_full.yml
-````
+```
 
 Isso gera um arquivo YAML contendo:
 
@@ -50,7 +49,7 @@ O diretório que queremos salvar é:
 .../site-packages/SUAVE-2.5.2-py3.8.egg
 ```
 
-### Fazer o backup:
+Fazer o backup:
 
 ```bash
 cd /home/abrao/anaconda3/envs/suave_env/lib/python3.8/site-packages
@@ -176,7 +175,7 @@ cp -r ~/Downloads/SUAVE/my_files/SUAVE_2.5.2_mod/EGG-INFO \
 
 ---
 
-### 4️⃣ Conferir se o Python está pegando o SUAVE certo
+## 6. Conferir se o Python está pegando o SUAVE certo
 
 Ainda com o `suave_env` ativado:
 
@@ -203,7 +202,7 @@ Se quiser, depois montamos um pequeno `restore_suave.sh` para você rodar na má
 
 ---
 
-## 6. ✔️ Verificar Instalação
+## 7. ✔️ Verificar Instalação
 
 ```bash
 python - << 'EOF'
@@ -223,7 +222,7 @@ Se rodar sem erros, a reproducibilidade está garantida.
 
 ---
 
-## 7. 🧩 Resumo dos Arquivos
+## 8. 🧩 Resumo dos Arquivos
 
 | Arquivo                           | Conteúdo                                    |
 | --------------------------------- | ------------------------------------------- |
@@ -233,7 +232,7 @@ Se rodar sem erros, a reproducibilidade está garantida.
 
 ---
 
-## 8. 📌 Observações Finais
+## 9. 📌 Observações Finais
 
 * O Conda **NÃO salva** alterações dentro de pacotes (`.py`).
 * Por isso o backup do diretório `SUAVE-2.5.2-py3.8.egg` é obrigatório.
